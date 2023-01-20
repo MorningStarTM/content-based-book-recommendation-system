@@ -27,4 +27,9 @@ image = ImageTk.PhotoImage(image)
 # Add the image to the canvas as a background
 canvas.create_image(0, 0, image=image, anchor="nw")
 
+#entry font
+my_font_1 = customtkinter.CTkFont(family="Arial", size=30)
+entry = customtkinter.CTkEntry(canvas, width=400, fg_color='white', text_color='black', font=my_font_1)
+entry.place(relx=0.35, rely=0.2)
+
 root.mainloop()
