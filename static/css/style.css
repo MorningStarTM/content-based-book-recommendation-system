@@ -14,8 +14,21 @@
 .box2 {
     width: 100%; /* set the width of the divs to be 100% of their parent container */
     height: 100px; /* set the height of the divs to be 100px */
-    margin-bottom: 5px;
+    margin-bottom: 25px;
     background-color: blueviolet;
+}
+
+.box2 h1 {
+    font-size: 80px;
+    margin: auto;
+    margin-left: 420px;
+}
+
+.box2 img {
+    width: 16%;
+    margin-right: 55px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
 .search-container {
@@ -53,3 +66,4 @@ button[type=submit] {
     font-size: 18px; /* set the font size of the icon */
     margin-right: 5px; /* add a margin to the right of the icon */
 }
+

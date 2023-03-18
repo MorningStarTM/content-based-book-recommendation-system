@@ -17,7 +17,14 @@
             </div>
             
         </div>
-        <div class="box2"></div>
+        <div class="box2">
+            <h1>High Rated Books</h1>
+            <div>
+                {% for url in urls %}
+                <img src="{{ url }}" alt="image">
+                {% endfor %}
+            </div>
+        </div>
     </div>
     
 
