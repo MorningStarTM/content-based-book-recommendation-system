@@ -9,14 +9,27 @@ app = Flask(__name__)
 
 
 
-@app.route('/')
+@app.route('/', methods=('POST', 'GET'))
 def index():
     # Read image URLs from DataFrame
     df = pd.read_csv('./books.csv')
     sorted_df = df.sort_values('average_rating', ascending=False)
     urls = sorted_df['thumbnail'][0:10].tolist()
+    titles = sorted_df['title'][0:10].tolist()
     
-    return render_template('index.html', urls=urls)
+
+    #get categories of books
+    categories = df['categories'].unique().tolist()
+
+    #get filtered row and sorting by rating
+    if request.method == "POST":
+        category = request.form['name']
+        df_filtered = df[df['categories'] == category]
+        df_filtered = df_filtered.sort_values('average_rating', ascending=False)
+        urls = df_filtered['thumbnail'][0:10].tolist()
+        titles = df_filtered['title'][0:10].tolist()
+
+    return render_template('index.html', urls=urls, categories=categories, titles=titles)
 
 
 @app.route('/image', methods=('POST', 'GET'))
