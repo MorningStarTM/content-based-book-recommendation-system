@@ -19,6 +19,15 @@
         </div>
         <div class="box2">
             <h1>High Rated Books</h1>
+            <div class="sorted">
+                <form action="" method="POST">
+                    <select name="name" id="name" onchange="submitForm()">
+                        <option value="david">David</option>
+                        <option value="adam">Adam</option>
+                    </select>
+                    <input type="submit" value="submit" id="submit-button">
+                </form>
+            </div>
             <div>
                 {% for url in urls %}
                 <img src="{{ url }}" alt="image">
