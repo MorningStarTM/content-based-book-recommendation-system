@@ -28,13 +28,20 @@ body{
     margin-left: 420px;
 }
 
-.box2 img {
-    width: 16%;
-    margin-right: 55px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    background-color: black;
+.box2-image-1 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 60px;
+    margin-left: 40px;
+    padding: 10px;
 }
+
+.box2-image-1 img {
+    width: 16%;
+    margin-left: 40px;
+    padding: 10px;
+}
+
 
 .search-container {
     display: flex; /* use flexbox to align the input field and button horizontally */

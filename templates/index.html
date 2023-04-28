@@ -29,11 +29,15 @@
                     <input type="submit" value="submit" >
                 </form>
             </div>
-            <div>
-                {% for i in range(0,10) %}
+            <div class="box2-image-1">
+                {% for i in range(0,5) %}
                 <img src="{{ urls[i] }}" alt="image">
-                <br>
-                <p><h3>{{ titles[i] }}</h3></p>
+                
+                {% endfor %}
+            </div>
+            <div class="box2-image-1">
+                {% for i in range(5,10) %}
+                <img src="{{ urls[i] }}" alt="image">
                 
                 {% endfor %}
             </div>
